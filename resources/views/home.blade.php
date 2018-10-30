@@ -1,10 +1,14 @@
 @extends('layouts.app')
-
+<style>
+.level{
+    font-size: 30px;
+}
+</style>
 @section('content')
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
+            <div class="panel panel-default" id="level">
                 <div class="panel-heading">Lavel 1</div>
                 <div class="panel-heading">Lavel 2</div>
                 <div class="panel-heading">Lavel 3</div>
