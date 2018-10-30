@@ -1,7 +1,7 @@
 @extends('layouts.app')
 <style>
-.level{
-    font-size: 30px;
+#level{
+    font-size: 24px;
 }
 </style>
 @section('content')
