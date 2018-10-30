@@ -22,14 +22,29 @@
                     <!-- Collapsed Hamburger -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
                         <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar">1</span>
-                        <span class="icon-bar">2</span>
-                        <span class="icon-bar">3</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ url('/home') }}">
                         ManagementAir
+                    </a>
+                    <a class="navbar-brand" href="{{ url('/level1') }}">
+                        Level1
+                    </a>
+                    <a class="navbar-brand" href="{{ url('/level2') }}">
+                        Level2
+                    </a>
+                    <a class="navbar-brand" href="{{ url('/level3') }}">
+                        Level3
+                    </a>
+                    <a class="navbar-brand" href="{{ url('/level4') }}">
+                        Level4
+                    </a>
+                    <a class="navbar-brand" href="{{ url('/level5') }}">
+                        Level5
                     </a>
                 </div>
 

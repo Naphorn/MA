@@ -18,3 +18,19 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/level1', function () {
+    return view('layouts.level1');
+});
+Route::get('/level2', function () {
+    return view('layouts.level2');
+});
+Route::get('/level3', function () {
+    return view('layouts.level3');
+});
+Route::get('/level4', function () {
+    return view('layouts.level4');
+});
+Route::get('/level5', function () {
+    return view('layouts.level5');
+});
