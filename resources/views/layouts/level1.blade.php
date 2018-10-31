@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@extends('layouts.menubar')
 
 @section('content')
 <!DOCTYPE html>
