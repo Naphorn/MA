@@ -18,7 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+/*--------------------------------Level---------------------------------------*/
 Route::get('/level1', function () {
     return view('layouts.level1');
 });
@@ -34,3 +34,7 @@ Route::get('/level4', function () {
 Route::get('/level5', function () {
     return view('layouts.level5');
 });
+/*--------------------------------Register------------------------------------*/
+// Route::get('/home', function () {
+//     return view('auth.register');
+// });
