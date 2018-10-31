@@ -9,7 +9,7 @@
   <body>
     <p>eiei 5</p>
 
-    <img src="https://github.com/Naphorn/MA/blob/master/resources/views/images/level1-1.png" class="rounded mx-auto d-block">
+    <img src="https://raw.githubusercontent.com/Naphorn/MA/master/resources/views/images/level5-1.png" class="rounded mx-auto d-block">
   </body>
 </html>
 @endsection
