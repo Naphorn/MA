@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -6,5 +8,8 @@
   </head>
   <body>
     <p>eiei 2</p>
+
+    <img src="https://raw.githubusercontent.com/Naphorn/MA/master/resources/views/images/level2-1.png" class="rounded mx-auto d-block">
   </body>
 </html>
+@endsection
