@@ -24,7 +24,7 @@
                   <th>ประสิทธิภาพ</th>
                   <th>สถานะ</th>
               </tr>
-               @foreach($users as $row)
+               @foreach($statusair as $row)
                   <tr>
                       <td>{{$row['IP']}}</td>
                       <td>{{$row['Tempcool']}}</td>
