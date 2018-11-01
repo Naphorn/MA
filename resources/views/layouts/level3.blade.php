@@ -1,5 +1,4 @@
 @extends('layouts.app')
-<<<<<<< HEAD
 
 @extends('layouts.menubar')
 @section('content')
@@ -16,8 +15,8 @@
       <div align="right">{{-- <a href="{{route('user.create')}}"class="btn btn-success">เพิ่มข้อมูลผู้ใช้</a>--}}</div> 
           <table {{--class="table table-bordered table-striped"--}} align="center" border="1"  width="70%"max-width="70%"margin-bottom="22px">
               <tr>
-                  <th scope="col">IP</th>
-                  <th scope="row">อุณหภูมิคอยล์เย็น</th>
+                  <th>IP</th>
+                  <th>อุณหภูมิคอยล์เย็น</th>
                   <th>อุณหภูมิห้อง</th>
                   <th>แรงดันคอยล์เย็น</th>
                   <th>กระแสคอยล์ร้อน</th>
@@ -92,19 +91,4 @@ new Vue({
 
 });
 </script> --}}
-=======
-@extends('layouts.menubar')
-
-@section('content')
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Level 3</title>
-  </head>
-  <body>
-    <center><img src="https://raw.githubusercontent.com/Naphorn/MA/master/resources/views/images/level3-1.png" class="rounded mx-auto d-block"></center>
-  </body>
-</html>
->>>>>>> 8e77855b2fbd1460acd206884ffc90fe62071ab8
 @endsection
