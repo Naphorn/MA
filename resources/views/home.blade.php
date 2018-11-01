@@ -25,28 +25,53 @@
         </div>
     </div>
 
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th scope="col">Status</th>
-          <th scope="col"></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-2">
+          <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Status</th>
+                <th scope="col">-----</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">IP</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">อุณหภูมิคอยล์เย็น</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">อุณหภูมิห้อง</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">แรงดันคอยล์เย็น</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">กระแสคอยล์ร้อน</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">ความเร็วลม</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">ประสิทธิภาพ</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">สถานะ</th>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
 
 </div>
 @endsection
