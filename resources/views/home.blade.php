@@ -12,21 +12,12 @@
                 <div class="panel-heading"><a href="level4">Lavel 4</a></div>
                 <div class="panel-heading"><a href="level5">Lavel 5</a></div>
 
-                <!-- <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div> -->
             </div>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-md-4 col-md-offset-2">
+        <div class="col-md-4 col-md-offset-4">
           <table class="table table-dark">
             <thead>
               <tr>
