@@ -13,7 +13,7 @@
               <p>{{\Session::get('success')}}</p>
           </div>
       @endif --}}
-      <div align="right">{{-- <a href="{{route('user.create')}}"class="btn btn-success">เพิ่มข้อมูลผู้ใช้</a>--}}</div> 
+      <div align="right">{{-- <a href="{{route('user.create')}}"class="btn btn-success">เพิ่มข้อมูลผู้ใช้</a>--}}</div>
           <table {{--class="table table-bordered table-striped"--}} align="center" border="1"  width="70%"max-width="70%"margin-bottom="22px">
               <tr>
                   <th scope="col">IP</th>
