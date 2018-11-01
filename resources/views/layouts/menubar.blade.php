@@ -1,4 +1,3 @@
-
 <style>
 #sidebar{
   position: fixed;
@@ -33,7 +32,7 @@ left: 0px;
 } */
 </style>
 <div id="sidebar">
-  <div class="toggle-btn" {{--onclick="toggleSidebar()"--}}> 
+  <div class="toggle-btn" {{--onclick="toggleSidebar()"--}}>
    <span></span>
    <span></span>
    <span></span>
@@ -54,7 +53,7 @@ left: 0px;
     <li>
       <a href="level5">Level 5</a>
     </li>
-    
+
   </ul>
 </div>
 {{-- <script>
@@ -62,5 +61,3 @@ left: 0px;
     document.getElementById("sidebar").classList.toggle('active');
   }
 </script> --}}
-
-
