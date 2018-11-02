@@ -3,7 +3,7 @@
 @extends('layouts.menubar')
 @section('content')
 <!DOCTYPE html>
-<div class=="container">
+<div class="container">
   <div class="row">
       <div class="col-md-12">
       <br><br>
@@ -19,6 +19,7 @@
                   <th>อุณหภูมิคอยล์เย็น</th>
                   <th>อุณหภูมิห้อง</th>
                   <th>แรงดันคอยล์เย็น</th>
+                  <th>กระแสคอยล์เย็น</th>
                   <th>กระแสคอยล์ร้อน</th>
                   <th>ความเร็วลม</th>
                   <th>ประสิทธิภาพ</th>
@@ -27,7 +28,7 @@
                @foreach($statusair as $row)
                   <tr>
                       <td>{{$row['IP']}}</td>
-                      <td>{{$row['Tempcool']}}</td>
+                      <td>{{$row['TempCool']}}</td>
                       <td>{{$row['TempRoom']}}</td>
                       <td>{{$row['voltCool']}}</td>
                       <td>{{$row['CurrentCool']}}</td>
