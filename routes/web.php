@@ -34,3 +34,7 @@ Route::get('/level4', function () {
 Route::get('/level5', function () {
     return view('layouts.level5');
 });
+
+Route::get('/showtable', function () {
+    return view('layouts.showtable');
+});
