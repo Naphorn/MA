@@ -22,7 +22,7 @@ class CreateStatusairTable extends Migration
           $table->float('CurrentHot');
           $table->float('WindSpeed');
           $table->float('Performance',50);
-          $table->char('Power',50);
+          $table->char('PowerStatus',50);
           $table->timestamps();
         });
     }
