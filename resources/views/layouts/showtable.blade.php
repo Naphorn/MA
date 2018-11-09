@@ -21,7 +21,7 @@
     } 
 
     
-    $sql = "SELECT IP, TempCool, TempRoom, VoltCool, CurrentCool, CurrentHot, WindSpeed, Performance, PowerStatus FROM statusair";
+    $sql = "SELECT IP, TempCool, Humidity, TempRoom, VoltCool, CurrentCool, CurrentHot, WindSpeed, Performance, PowerStatus FROM statusair";
     $result = $conn->query($sql);
 
   ?>
@@ -30,6 +30,7 @@
         <tr>
           <td>IP</td>
           <td>อุณหภูมิคอยล์เย็น</td>
+          <td>ความชื้นสัมพัทธ์</td>
           <td>อุณหภูมิห้อง</td>
           <td>แรงดันคอยล์เย็น</td>
           <td>กระแสคอยล์เย็น</td>
@@ -46,6 +47,7 @@
                 echo "<tr>";
                 echo "<td>" .$row["IP"] . "</td>";
                 echo "<td>" .$row["TempCool"] . "</td>";
+                echo "<td>" .$row["Humidity"] . "</td>";
                 echo "<td>" .$row["TempRoom"] . "</td>";
                 echo "<td>" .$row["VoltCool"] . "</td>";
                 echo "<td>" .$row["CurrentCool"] . "</td>";

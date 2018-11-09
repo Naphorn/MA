@@ -16,6 +16,7 @@ class CreateStatusairTable extends Migration
         Schema::create('statusair', function (Blueprint $table) {
           $table->string('IP',100);
           $table->float('TempCool');
+          $table->float('Humidity');
           $table->float('TempRoom');
           $table->float('VoltCool');
           $table->float('CurrentCool');

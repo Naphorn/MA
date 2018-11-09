@@ -46,6 +46,10 @@
                                 <td></td>
                             </tr>
                             <tr>
+                                <th scope="row">ความชื้นสัมพัทธ์</th>
+                                <td></td>
+                            </tr>
+                            <tr>
                                 <th scope="row">อุณหภูมิห้อง</th>
                                 <td></td>
                             </tr>
