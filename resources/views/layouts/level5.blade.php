@@ -46,26 +46,25 @@
             <td>สถานะ</td>
         </tr>
     <tr>
-
-    <td>
-        <?php
-        while($row = $result->fetch_assoc()) 
-        {
-            echo "<tr>";
-            echo "<td>" .$row["IP"] . "</td>";
-            echo "<td>" .$row["TempCool"] . "</td>";
-            echo "<td>" .$row["Humidity"] . "</td>";
-            echo "<td>" .$row["TempRoom"] . "</td>";
-            echo "<td>" .$row["VoltCool"] . "</td>";
-            echo "<td>" .$row["CurrentCool"] . "</td>";
-            echo "<td>" .$row["CurrentHot"] . "</td>";
-            echo "<td>" .$row["WindSpeed"] . "</td>";
-            echo "<td>" .$row["Performance"] . "</td>";
-            echo "<td>" .$row["PowerStatus"] . "</td>";
-        }
-        ?>
-        &nbsp;
-    </td>
+        <td>
+            <?php
+            while($row = $result->fetch_assoc()) 
+            {
+                echo "<tr>";
+                echo "<td>" .$row["IP"] . "</td>";
+                echo "<td>" .$row["TempCool"] . "</td>";
+                echo "<td>" .$row["Humidity"] . "</td>";
+                echo "<td>" .$row["TempRoom"] . "</td>";
+                echo "<td>" .$row["VoltCool"] . "</td>";
+                echo "<td>" .$row["CurrentCool"] . "</td>";
+                echo "<td>" .$row["CurrentHot"] . "</td>";
+                echo "<td>" .$row["WindSpeed"] . "</td>";
+                echo "<td>" .$row["Performance"] . "</td>";
+                echo "<td>" .$row["PowerStatus"] . "</td>";
+            }
+            ?>
+            &nbsp;
+        </td>
     </tr>
     <!-- ----------------------------------------------------------------------------------------------------------------------------------- -->
 
