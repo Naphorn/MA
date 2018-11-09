@@ -28,7 +28,26 @@
                 </div>
 
                 <div class="modal-body">
+                <!-- ------------------------------------------------------------------------------------------------------------ -->
+                <?PHP
 
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "ma";
+
+                    // Create connection
+                    $conn = new mysqli($servername, $username, $password, $dbname);
+                    // Check connection
+                    if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                    } 
+
+                    $sql = "SELECT IP, TempCool, Humidity, TempRoom, VoltCool, CurrentCool, CurrentHot, WindSpeed, Performance, PowerStatus FROM statusair";
+                    $result = $conn->query($sql);
+
+                ?>
+                <!-- ------------------------------------------------------------------------------------------------------------ -->
                     <table class="table table-dark">
                         <thead>
                             <tr>
@@ -37,53 +56,53 @@
                             </tr>
                         </thead>
                         <tbody>
+                <!-- ------------------------------------------------------------------------------------------------------------ -->
                             <tr>
                                 <th scope="row">IP</th>
-                                <td></td>
+                                <th scope="row">อุณหภูมิคอยล์เย็น</th>               
+                                <th scope="row">ความชื้นสัมพัทธ์</th>                
+                                <th scope="row">อุณหภูมิห้อง</th>                              
+                                <th scope="row">แรงดันคอยล์เย็น</th>           
+                                <th scope="row">กระแสคอยล์เย็น</th>               
+                                <th scope="row">กระแสคอยล์ร้อน</th>         
+                                <th scope="row">ความเร็วลม</th>  
+                                <th scope="row">ประสิทธิภาพ</th>        
+                                <th scope="row">สถานะ</th>                     
                             </tr>
+                <!-- ------------------------------------------------------------------------------------------------------------ -->
                             <tr>
-                                <th scope="row">อุณหภูมิคอยล์เย็น</th>
-                                <td></td>
+                                <td>
+                                    <?php
+                                        while($row = $result->fetch_assoc()) 
+                                        {
+                                            echo "<tr>";
+                                            echo "<td>" .$row["IP"] . "</td>";
+                                            echo "<td>" .$row["TempCool"] . "</td>";
+                                            echo "<td>" .$row["Humidity"] . "</td>";
+                                            echo "<td>" .$row["TempRoom"] . "</td>";
+                                            echo "<td>" .$row["VoltCool"] . "</td>";
+                                            echo "<td>" .$row["CurrentCool"] . "</td>";
+                                            echo "<td>" .$row["CurrentHot"] . "</td>";
+                                            echo "<td>" .$row["WindSpeed"] . "</td>";
+                                            echo "<td>" .$row["Performance"] . "</td>";
+                                            echo "<td>" .$row["PowerStatus"] . "</td>";
+                                        }
+                                    ?>
+                                        &nbsp;
+                                </td>
                             </tr>
-                            <tr>
-                                <th scope="row">ความชื้นสัมพัทธ์</th>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">อุณหภูมิห้อง</th>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">แรงดันคอยล์เย็น</th>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">กระแสคอยล์ร้อน</th>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">ความเร็วลม</th>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">ประสิทธิภาพ</th>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">สถานะ</th>
-                                <td></td>
-                            </tr>
+                <!-- ------------------------------------------------------------------------------------------------------------ -->
                         </tbody>
                     </table>
 
                     <thead>
-                    <tr>
-                    <th scope="row">Switch</th>
-                    </tr>
-                    <tr>
-                    <th scope="col"><button type="button" class="btn btn-success">ON</button></th>
-                    <th scope="col"><button type="button" class="btn btn-danger">OFF</button></th>
-                    </tr>
+                        <tr>
+                            <th scope="row">Switch</th>
+                        </tr>
+                        <tr>
+                            <th scope="col"><button type="button" class="btn btn-success">ON</button></th>
+                            <th scope="col"><button type="button" class="btn btn-danger">OFF</button></th>
+                        </tr>
                     </thead>
 
                 </div>
