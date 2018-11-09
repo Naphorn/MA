@@ -1,102 +1,74 @@
 @extends('layouts.app')
-
 @extends('layouts.menubar')
+
 @section('content')
 <!DOCTYPE html>
-<div class="container">
-  <div class="row">
-      <div class="col-md-12">
-      <br><br>
-      @if(\Session::has('success'))
-          <div class="alert alert-success">
-              <p>{{\Session::get('success')}}</p>
-          </div>
-      @endif
-      <div align="right">{{-- <a href="{{route('user.create')}}"class="btn btn-success">เพิ่มข้อมูลผู้ใช้</a>--}}</div>
-          <table {{--class="table table-bordered table-striped"--}} align="center" border="1"  width="70%"max-width="70%"margin-bottom="22px">
-              <tr>
-                  <th>IP</th>
-                  <th>อุณหภูมิคอยล์เย็น</th>
-                  <th>อุณหภูมิห้อง</th>
-                  <th>แรงดันคอยล์เย็น</th>
-                  <th>กระแสคอยล์เย็น</th>
-                  <th>กระแสคอยล์ร้อน</th>
-                  <th>ความเร็วลม</th>
-                  <th>ประสิทธิภาพ</th>
-                  <th>สถานะ</th>
-              </tr>
-               @foreach($statusair as $row)
-                  <tr>
-                      <td>{{$row['IP']}}</td>
-                      <td>{{$row['TempCool']}}</td>
-                      <td>{{$row['TempRoom']}}</td>
-                      <td>{{$row['voltCool']}}</td>
-                      <td>{{$row['CurrentCool']}}</td>
-                      <td>{{$row['CurrentHot']}}</td>
-                      <td>{{$row['WindSpeed']}}</td>
-                      <td>{{$row['Performance']}}</td>
-                      <td>{{$row['Power']}}</td>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Level 3</title>
+  </head>
+  <body>
+    <center><img src="https://raw.githubusercontent.com/Naphorn/MA/master/resources/views/images/level3-1.png" class="rounded mx-auto d-block" width="200"  height="400"></center>
 
-                      {{-- <td><a href="{{action('UsersController@edit',$row['id'])}}" class="btn btn-warning">Edit</a></td>
-                      <td>
-                          <form method="post" class="delete_form" action="{{action('UsersController@destroy',$row['id'])}}">
-                              {{csrf_field()}}
-                              <input type="hidden" name="_method" value="DELETE" />
-                              <button type="submit" class="btn btn-danger">Delete</button>
-                          </form>
-                      </td> --}}
-                  </tr>
-              @endforeach
-          </table>
-      </div>
-  </div>
-</div>
-{{-- <script type="text/javascript">
-  $(document).ready(function()
-      {$('.delete_form').on('submit', function()
-          {
-              if(confirm("คุณต้องการลบข้อมูลใช่หรือไม่ ?"))
-              {
-                  return true;
-              }
-              else
-              {
-                  return false;
-              }
-          });
-      });
-</script> --}}
-{{-- <div id='app'>
-<users></users>
-</div> --}}
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-{{-- <script>
-Vue.component('users',(
-  templete: '#users-template'
+    <!-- -------------------------------------------------------Show Table------------------------------------------------------------------ -->
+    <?PHP
 
-  data: function() {
-      return {
-          users:[]
-      }
-  },
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "ma";
 
-  created: function() {
-      this.getUsers();
-  },
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        // Check connection
+        if ($conn->connect_error) 
+        {
+            die("Connection failed: " . $conn->connect_error);
+        } 
 
-  methods: {
-      getUsers: function() {
-          $.getJSON("{{route('api_users')}}", function(users) {
-           this.users = users;
-          }.bind(this));
+        $sql = "SELECT IP, TempCool, Humidity, TempRoom, VoltCool, CurrentCool, CurrentHot, WindSpeed, Performance, PowerStatus FROM statusair";
+        $result = $conn->query($sql);
 
-          setTimeout(this.getUsers,1000);
-      }
-  }
-));
-new Vue({
-  e1: '#app',
+    ?>
 
-});
-</script> --}}
+    <table width="1000" border="2" align="center">
+        <tr>
+            <td>ห้อง</td>
+            <td>อุณหภูมิคอยล์เย็น</td>
+            <td>ความชื้นสัมพัทธ์</td>
+            <td>อุณหภูมิห้อง</td>
+            <td>แรงดันคอยล์เย็น</td>
+            <td>กระแสคอยล์เย็น</td>
+            <td>กระแสคอยล์ร้อน</td>
+            <td>ความเร็วลม</td>
+            <td>ประสิทธิภาพ</td>
+            <td>สถานะ</td>
+        </tr>
+    <tr>
+
+    <td>
+        <?php
+        while($row = $result->fetch_assoc()) 
+        {
+            echo "<tr>";
+            echo "<td>" .$row["IP"] . "</td>";
+            echo "<td>" .$row["TempCool"] . "</td>";
+            echo "<td>" .$row["Humidity"] . "</td>";
+            echo "<td>" .$row["TempRoom"] . "</td>";
+            echo "<td>" .$row["VoltCool"] . "</td>";
+            echo "<td>" .$row["CurrentCool"] . "</td>";
+            echo "<td>" .$row["CurrentHot"] . "</td>";
+            echo "<td>" .$row["WindSpeed"] . "</td>";
+            echo "<td>" .$row["Performance"] . "</td>";
+            echo "<td>" .$row["PowerStatus"] . "</td>";
+        }
+        ?>
+        &nbsp;
+    </td>
+    </tr>
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------- -->
+
+  </body>
+</html>
 @endsection
