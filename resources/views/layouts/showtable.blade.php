@@ -19,7 +19,6 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     } 
-
     
     $sql = "SELECT IP, TempCool, Humidity, TempRoom, VoltCool, CurrentCool, CurrentHot, WindSpeed, Performance, PowerStatus FROM statusair";
     $result = $conn->query($sql);
