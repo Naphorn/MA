@@ -14,17 +14,18 @@ class CreateStatusairTable extends Migration
     public function up()
     {
         Schema::create('statusair', function (Blueprint $table) {
-          $table->string('IP',100);
-          $table->float('TempCool');
-          $table->float('Humidity');
-          $table->float('TempRoom');
-          $table->float('VoltCool');
-          $table->float('CurrentCool');
-          $table->float('CurrentHot');
-          $table->float('WindSpeed');
-          $table->float('Performance',50);
-          $table->char('PowerStatus',50);
-          $table->timestamps();
+            $table->increments('id');
+            $table->string('IP',100);
+            $table->float('TempCool');
+            $table->float('Humidity');
+            $table->float('TempRoom');
+            $table->float('VoltCool');
+            $table->float('CurrentCool');
+            $table->float('CurrentHot');
+            $table->float('WindSpeed');
+            $table->float('Performance',50);
+            $table->char('PowerStatus',50);
+            $table->timestamps();
         });
     }
 

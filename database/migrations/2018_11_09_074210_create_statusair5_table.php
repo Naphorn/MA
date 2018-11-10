@@ -14,6 +14,7 @@ class CreateStatusair5Table extends Migration
     public function up()
     {
         Schema::create('statusair5', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('IP',100);
             $table->float('TempCool');
             $table->float('Humidity');
