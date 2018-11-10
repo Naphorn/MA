@@ -34,5 +34,24 @@ Route::get('/level4', function () {
 Route::get('/level5', function () {
     return view('layouts.level5');
 });
-/*-----------------------------------Controller Statusair----------------------*/
-Route::get('/statusair', 'StatusairController@getStatusair');
+/*-----------------------------------Test-------------------------------------*/
+// Route::get('/statusair', function () {
+//     return view('showtable');
+// });
+
+/*-----------------------------------Controller Statusair---------------------*/
+use App\Http\Controllers\StatusairController;
+Route::get('/testcontroller', 'StatusairController@getStatusair')->name('showtable');
+
+/*-----------------------------------Models Statusair-------------------------*/
+use App\Models\Statusair;
+Route::get('/statusair', function () {
+    $statusairs = statusair::all();
+    
+    return $statusairs;
+});
+
+
+
+
+

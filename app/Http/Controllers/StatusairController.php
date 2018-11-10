@@ -2,6 +2,7 @@
  
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
 class StatusairController extends Controller
@@ -13,8 +14,10 @@ class StatusairController extends Controller
 
     public function getStatusair()
     {
-        return "in controller";
+        $statusairs = DB::table('statusair')->get();
 
+        return view('layouts.showtable', ['statusair' => $statusairs]);
+        // return $statusairs;
     }
 }
 
