@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Models\Statusair;
 
 class StatusairController extends Controller
 {
@@ -14,10 +15,17 @@ class StatusairController extends Controller
 
     public function getStatusair()
     {
-        $statusairs = DB::table('statusair')->get();
+        header('content-type:text/html; charset=utf-8');
+        $statusairs = Statusair::get();
+        return view('layouts.showtable',[
+            $statusairs = Statusair::take(1)->latest()->get()
+        ]);
 
-        return view('layouts.showtable', ['statusair' => $statusairs]);
-        // return $statusairs;
+        // $statusairs = Statusair::take(1)->latest()->get();
+
+        // $statusairs ? 'Model statusair Connect Yes!' : 'Error! Model statusair Connect False!!!';
+        // $statusairs = Statusair::where('id','1')->get();
+        // $statusairs = Statusair::where('id','1')->first();
     }
 }
 

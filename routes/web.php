@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Statusair;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,21 +37,23 @@ Route::get('/level5', function () {
     return view('layouts.level5');
 });
 /*-----------------------------------Test-------------------------------------*/
-// Route::get('/statusair', function () {
-//     return view('showtable');
-// });
+Route::get('/statusair', function () {
+    return view('layouts.showtable');
+});
 
-/*-----------------------------------Controller Statusair---------------------*/
-use App\Http\Controllers\StatusairController;
 Route::get('/testcontroller', 'StatusairController@getStatusair')->name('showtable');
 
+/*-----------------------------------Controller Statusair---------------------*/
+// use App\Http\Controllers\StatusairController;
+// Route::get('/testcontroller', 'StatusairController@getStatusair')->name('showtable');
+
 /*-----------------------------------Models Statusair-------------------------*/
-use App\Models\Statusair;
-Route::get('/statusair', function () {
-    $statusairs = statusair::all();
+// use App\Models\Statusair;
+// Route::get('/statusair', function () {
+//     $statusairs = statusair::all();
     
-    return $statusairs;
-});
+//     return $statusairs;
+// });
 
 
 
