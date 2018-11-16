@@ -41,7 +41,7 @@ Route::get('/statusair', function () {
     return view('layouts.showtable');
 });
 
-$Users = Route::get('/testcontroller', 'StatusairController@getStatusair')->name('showtable');
+Route::get('/testcontroller', 'StatusairController@getStatusair')->name('showtable');
 
 /*-----------------------------------Controller Statusair---------------------*/
 // use App\Http\Controllers\StatusairController;
