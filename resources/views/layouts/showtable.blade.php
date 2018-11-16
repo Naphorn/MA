@@ -22,20 +22,23 @@
                     <th>สถานะ</th>
                     <th>ส่วนควบคุม</th>
                 </tr>
+                @foreach($Users as $row)
                 <tr align=”center”>
-                    <td><?php return $statusairs;?></td>
                     
-                    <!-- <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td> -->
+                    <td>{{$row->IP}}</td>
+                    <td>{{$row->TempCool}}'</td>
+                    <td>{{$row->Humidity}}</td>
+                    <td>{{$row->TempRoom}}</td>
+                    <td>{{$row->VoltCool}}</td>
+                    <td>{{$row->CurrentCool}}</td>
+                    <td>{{$row->CurrentHot}}</td>
+                    <td>{{$row->WindSpeed}}</td>
+                    <td>{{$row->Performance}}</td>
+                    <td>{{$row->PowerStatus}}</td>
+                    <td><a>Edit</a></td>
+                    
                 </tr>
+                @endforeach
             </table>
         </div>
 
