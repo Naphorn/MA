@@ -22,20 +22,6 @@
                     <th>สถานะ</th>
                     <th>ส่วนควบคุม</th>
                 </tr>
-                <tr align=”center”>
-                    <td><?php return $statusairs;?></td>
-                    
-                    <!-- <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td> -->
-                </tr>
             </table>
         </div>
 

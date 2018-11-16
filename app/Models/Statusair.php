@@ -7,9 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Statusair extends Model
 {
     protected $table = 'statusair';
-
-
-    
+    public $timestamps = false;
 }
-
-
