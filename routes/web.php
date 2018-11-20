@@ -14,7 +14,7 @@ use App\Models\Statusair;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome'); 
 });
 
 Auth::routes();
@@ -41,8 +41,8 @@ Route::get('/statusair', function () {
     return view('layouts.showtable');
 });
 
-Route::get('/testcontroller', 'StatusairController@getStatusair')->name('showtable');
-
+// Route::get('/testcontroller', 'StatusairController@getStatusair')->name('showtable');
+Route::resource('/testcontroller','StatusControll');
 /*-----------------------------------Controller Statusair---------------------*/
 // use App\Http\Controllers\StatusairController;
 // Route::get('/testcontroller', 'StatusairController@getStatusair')->name('showtable');
