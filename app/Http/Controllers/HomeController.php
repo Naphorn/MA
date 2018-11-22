@@ -23,6 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     { 
+        // $status = statusair::all()->toArray();
+        // return view('statusair.home',compact('status'));
         return view('home');
     }
 }
