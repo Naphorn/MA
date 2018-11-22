@@ -34,16 +34,17 @@
 
     <table width="1000" border="2" align="center">
         <tr>
-            <td>ห้อง</td>
-            <td>อุณหภูมิคอยล์เย็น</td>
-            <td>ความชื้นสัมพัทธ์</td>
-            <td>อุณหภูมิห้อง</td>
-            <td>แรงดันคอยล์เย็น</td>
-            <td>กระแสคอยล์เย็น</td>
-            <td>กระแสคอยล์ร้อน</td>
-            <td>ความเร็วลม</td>
-            <td>ประสิทธิภาพ</td>
-            <td>สถานะ</td>
+            <td align="center">ห้อง</td>
+            <td align="center">อุณหภูมิคอยล์เย็น</td>
+            <td align="center">ความชื้นสัมพัทธ์</td>
+            <td align="center">อุณหภูมิห้อง</td>
+            <td align="center">แรงดันคอยล์เย็น</td>
+            <td align="center">กระแสคอยล์เย็น</td>
+            <td align="center">กระแสคอยล์ร้อน</td>
+            <td align="center">ความเร็วลม</td>
+            <td align="center">ประสิทธิภาพ</td>
+            <td align="center">สถานะ</td>
+            <td align="center">ส่วนควบคุม</td>
         </tr>
     <tr>
         <td>
@@ -64,6 +65,11 @@
             }
             ?>
             &nbsp;
+        </td>
+        <td>
+            <button type="button" class="btn btn-outline-success">On</button>
+            <button type="button" class="btn btn-outline-danger">Off</button>
+            <button type="button" class="btn btn-outline-dark">Config</button>
         </td>
     </tr>
     <!-- ----------------------------------------------------------------------------------------------------------------------------------- -->

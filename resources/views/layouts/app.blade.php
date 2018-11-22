@@ -24,7 +24,7 @@
         }
 
         .full-height {
-            height: 100vh;
+            height: 80vh;
         }
 
         .flex-center {
@@ -60,18 +60,20 @@
             text-decoration: none;
             text-transform: uppercase;
         }
+
         #app{
             height: 100%;
         }
+
         .m-b-md {
             margin-bottom: 30px;
         }
+
         .WelcomePage{
             text-align: center;
             display: table-cell;
             vertical-align: middle;
         }
-        
     </style>
 
 </head>
@@ -121,7 +123,7 @@
                         <!-- Authentication Links -->
                         @guest
                             <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            <!-- <li><a href="{{ route('register') }}">Register</a></li> -->
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
