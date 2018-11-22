@@ -7,11 +7,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>@yield('title')</title>
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <style>
         html, body {
@@ -60,20 +56,11 @@
             text-decoration: none;
             text-transform: uppercase;
         }
-        #app{
-            height: 100%;
-        }
+
         .m-b-md {
             margin-bottom: 30px;
         }
-        .WelcomePage{
-            text-align: center;
-            display: table-cell;
-            vertical-align: middle;
-        }
-        
     </style>
-
 </head>
 <body>
     <div id="app">
@@ -148,9 +135,9 @@
             </div>
         </nav>
 
-        @yield('content')
+        
     </div>
-
+    @yield('content')
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
