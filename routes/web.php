@@ -19,8 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::resource('statusair','HomeController');
-Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('views','HomeController');
+// Route::get('/home', 'HomeController@index')->name('home');
 // Route::get('/register',function () {
 //     return viwe('auth.passwords.register');
 // });
