@@ -36,9 +36,9 @@ Route::get('/home', 'StatusairController@getStatusair')->name('home');
 // Route::get('/level4', function () {
 //     return view('layouts.level4');
 // });
-// Route::get('/level5', function () {
-//     return view('layouts.level5');
-// });
+Route::get('/level5', function () {
+    return view('layouts.level5');
+});
 /*-----------------------------------Test-------------------------------------*/
 // Route::get('/statusair', function () {
 //     return view('layouts.showtable');

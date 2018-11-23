@@ -1,42 +1,33 @@
 <style>
-    html, body {
-        background-color: #FFE4E1;
-        color: #636b6f;
-        font-family: 'Raleway', sans-serif;
-        font-weight: 100;
-        height: 100vh;
-        margin: 0;
+    .full-height-level {
+        height: 10vh;
     }
 
-    .full-height {
-        height: 100vh;
-    }
-
-    .flex-center {
+    .flex-center-level {
         align-items: center;
         display: flex;
         justify-content: center;
     }
 
-    .position-ref {
+    .position-ref-level {
         position: relative;
     }
 
-    .top-right {
+    .top-right-level {
         position: absolute;
         right: 10px;
         top: 18px;
     }
 
-    .content {
+    .content-level {
         text-align: center;
     }
 
-    .title {
-        font-size: 84px;
+    .title-level {
+        font-size: 50px;
     }
 
-    .links > a {
+    .links-level > a {
         color: #636b6f;
         padding: 0 25px;
         font-size: 12px;
@@ -46,7 +37,7 @@
         text-transform: uppercase;
     }
 
-    .m-b-md {
-        margin-bottom: 30px;
+    .m-b-md-level {
+        margin-bottom: 10px;
     }
 </style>

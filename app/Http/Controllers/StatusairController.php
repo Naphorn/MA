@@ -45,3 +45,4 @@ class StatusairController extends Controller
         // $statusairs = Statusair::where('id','1')->first();
     }
 }
+

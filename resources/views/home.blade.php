@@ -16,9 +16,9 @@
     </div>
 </div>
 
-<table width="1500" border="1" align="center">
+<table id="statusairs" width="1500" border="1" align="center">
     <tr>
-        <td align="center">ห้อง</td>
+        <td align="center">ห้อง </td>
         <td align="center">อุณหภูมิคอยล์เย็น</td>
         <td align="center">ความชื้นสัมพัทธ์</td>
         <td align="center">อุณหภูมิห้อง</td>
@@ -29,6 +29,19 @@
         <td align="center">ประสิทธิภาพ</td>
         <td align="center">สถานะ</td>
         <td align="center">ส่วนควบคุม</td>
+    </tr>
+    <tr>
+        <td align="center">&nbsp;</td>
+        <td align="center">&nbsp;</td>
+        <td align="center">&nbsp;</td>
+        <td align="center">&nbsp;</td>
+        <td align="center">&nbsp;</td>
+        <td align="center">&nbsp;</td>
+        <td align="center">&nbsp;</td>
+        <td align="center">&nbsp;</td>
+        <td align="center">&nbsp;</td>
+        <td align="center">&nbsp;</td>
+        <td align="center">&nbsp;</td>
     </tr>
 </table>
 @endsection
