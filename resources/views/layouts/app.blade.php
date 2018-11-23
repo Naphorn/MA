@@ -95,21 +95,7 @@
                     <a class="navbar-brand" href="{{ url('/home') }}">
                         ManagementAir
                     </a>
-                    <!-- <a class="navbar-brand" href="{{ url('/level1') }}">
-                        Level1
-                    </a>
-                    <a class="navbar-brand" href="{{ url('/level2') }}">
-                        Level2
-                    </a>
-                    <a class="navbar-brand" href="{{ url('/level3') }}">
-                        Level3
-                    </a>
-                    <a class="navbar-brand" href="{{ url('/level4') }}">
-                        Level4
-                    </a>
-                    <a class="navbar-brand" href="{{ url('/level5') }}">
-                        Level5
-                    </a> -->
+
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">

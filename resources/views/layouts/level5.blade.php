@@ -1,73 +1,30 @@
 @extends('layouts.app')
-@extends('layouts.menubar')
-
+@extends('master')
+@section('title','Level 5')
 @section('content')
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Level 5</title>
-  </head>
-  <body>
-    <center><img src="https://raw.githubusercontent.com/Naphorn/MA/master/resources/views/images/level5-1.png" class="rounded mx-auto d-block" width="200"  height="400"></center>
+<div class="flex-center-level position-ref-level full-height-level">
+    <div class="content-level">
+        <div class="title-level m-b-md-level">
+            Level 5
+        </div>
+    </div>
+</div>
 
-    <!-- -------------------------------------------------------Show Table------------------------------------------------------------------ -->
-    <?PHP
+<center><img src="https://raw.githubusercontent.com/Naphorn/MA/master/resources/views/images/level5-1.png" class="rounded mx-auto d-block" width="200"  height="400"></center>
 
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "ma";
-
-        // Create connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        // Check connection
-        if ($conn->connect_error) 
-        {
-            die("Connection failed: " . $conn->connect_error);
-        } 
-
-        $sql = "SELECT IP, TempCool, Humidity, TempRoom, VoltCool, CurrentCool, CurrentHot, WindSpeed, Performance, PowerStatus FROM statusair5";
-        $result = $conn->query($sql);
-
-    ?>
-
-    <table width="1000" border="2" align="center">
-        <tr>
-            <td>ห้อง</td>
-            <td>อุณหภูมิคอยล์เย็น</td>
-            <td>ความชื้นสัมพัทธ์</td>
-            <td>อุณหภูมิห้อง</td>
-            <td>แรงดันคอยล์เย็น</td>
-            <td>กระแสคอยล์เย็น</td>
-            <td>กระแสคอยล์ร้อน</td>
-            <td>ความเร็วลม</td>
-            <td>ประสิทธิภาพ</td>
-            <td>สถานะ</td>
-        </tr>
+<table width="1500" border="1" align="center">
     <tr>
-        <td>
-            <?php
-            while($row = $result->fetch_assoc()) 
-            {
-                echo "<tr>";
-                echo "<td>" .$row["IP"] . "</td>";
-                echo "<td>" .$row["TempCool"] . "</td>";
-                echo "<td>" .$row["Humidity"] . "</td>";
-                echo "<td>" .$row["TempRoom"] . "</td>";
-                echo "<td>" .$row["VoltCool"] . "</td>";
-                echo "<td>" .$row["CurrentCool"] . "</td>";
-                echo "<td>" .$row["CurrentHot"] . "</td>";
-                echo "<td>" .$row["WindSpeed"] . "</td>";
-                echo "<td>" .$row["Performance"] . "</td>";
-                echo "<td>" .$row["PowerStatus"] . "</td>";
-            }
-            ?>
-            &nbsp;
-        </td>
+        <td align="center">ห้อง</td>
+        <td align="center">อุณหภูมิคอยล์เย็น</td>
+        <td align="center">ความชื้นสัมพัทธ์</td>
+        <td align="center">อุณหภูมิห้อง</td>
+        <td align="center">แรงดันคอยล์เย็น</td>
+        <td align="center">กระแสคอยล์เย็น</td>
+        <td align="center">กระแสคอยล์ร้อน</td>
+        <td align="center">ความเร็วลม</td>
+        <td align="center">ประสิทธิภาพ</td>
+        <td align="center">สถานะ</td>
+        <td align="center">ส่วนควบคุม</td>
     </tr>
-    <!-- ----------------------------------------------------------------------------------------------------------------------------------- -->
-
-  </body>
-</html>
+</table>
 @endsection

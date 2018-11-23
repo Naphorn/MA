@@ -1,29 +1,42 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-    </head>
-    <body>
-
-        <div class="container">
-            <table>
-                <table width="1500" border="1" align="center">
-                <tr align=”center”>
-                    <th>ห้อง</th>
-                    <th>อุณหภูมิคอยล์เย็น</th>
-                    <th>ความชื้นสัมพัทธ์</th>
-                    <th>อุณหภูมิห้อง</th>
-                    <th>แรงดันคอยล์เย็น</th>
-                    <th>กระแสคอยล์เย็น</th>
-                    <th>กระแสคอยล์ร้อน</th>
-                    <th>ความเร็วลม</th>
-                    <th>ประสิทธิภาพ</th>
-                    <th>สถานะ</th>
-                    <th>ส่วนควบคุม</th>
-                </tr>
-            </table>
-        </div>
-
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+    <title>Data</title>
+</head>
+<body>
+    <table id="statusair" class="table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>IP</th>
+                <th>TempCool</th>
+                <th>Humidity</th>
+                <th>TempRoom</th>
+                <th>VoltCool</th>
+                <th>CurrentCool</th>
+                <th>CurrentHot</th>
+                <th>WindSpeed</th>
+                <th>Performance</th>
+                <th>PowerStatus</th>                
+            </tr>
+        </thead>
+        </table>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+<script>
+        $(document).ready(function() {
+            $('#statusair').DataTable( {
+                "processing": true,
+                "serverSide": true,
+                "ajax": "statusair.php"
+            } );
+        } );
+    </script>
+</body>
 </html>

@@ -24,6 +24,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Route::get('/register',function () {
 //     return viwe('auth.passwords.register');
 // });
+Route::get('/home', 'StatusairController@getStatusair')->name('home');
+
 /*--------------------------------Level---------------------------------------*/
 // Route::get('/level1', function () {
 //     return view('layouts.level1');
@@ -37,15 +39,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Route::get('/level4', function () {
 //     return view('layouts.level4');
 // });
-// Route::get('/level5', function () {
-//     return view('layouts.level5');
-// });
+Route::get('/level5', function () {
+    return view('layouts.level5');
+});
 /*-----------------------------------Test-------------------------------------*/
 // Route::get('/statusair', function () {
 //     return view('layouts.showtable');
 // });
-
-// Route::get('/testcontroller', 'StatusairController@getStatusair')->name('showtable');
 
 /*-----------------------------------Controller Statusair---------------------*/
 // use App\Http\Controllers\StatusairController;
@@ -58,8 +58,3 @@ Route::get('/home', 'HomeController@index')->name('home');
     
 //     return $statusairs;
 // });
-
-
-
-
-

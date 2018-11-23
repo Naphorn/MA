@@ -32,7 +32,7 @@ class StatusairController extends Controller
             echo $statusair->PowerStatus;
         }
         
-        return view('layouts.showtable');
+        return view('home');
 
         // return view('layouts.showtable',[
         //     $statusairs = Statusair::take(1)->latest()->get()
