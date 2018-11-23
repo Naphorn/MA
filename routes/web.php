@@ -21,6 +21,8 @@ Auth::routes();
 
 Route::resource('statusair','HomeController');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'StatusairController@getStatusair')->name('home');
+
 /*--------------------------------Level---------------------------------------*/
 // Route::get('/level1', function () {
 //     return view('layouts.level1');
@@ -42,8 +44,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 //     return view('layouts.showtable');
 // });
 
-// Route::get('/testcontroller', 'StatusairController@getStatusair')->name('showtable');
-
 /*-----------------------------------Controller Statusair---------------------*/
 // use App\Http\Controllers\StatusairController;
 // Route::get('/testcontroller', 'StatusairController@getStatusair')->name('showtable');
@@ -55,8 +55,3 @@ Route::get('/home', 'HomeController@index')->name('home');
     
 //     return $statusairs;
 // });
-
-
-
-
-
