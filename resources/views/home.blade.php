@@ -10,7 +10,7 @@
                 <div class="panel-heading"><a href="level3">Lavel 3</a></div>
                 <div class="panel-heading"><a href="level4">Lavel 4</a></div>
                 <div class="panel-heading"><a href="level5">Lavel 5</a></div>
-                <div class="panel-heading"><a href="{{ route('register') }}">Register</a></div>
+                <div class="panel-heading"><a href="../register">Register</a></div>
             </div>
         </div>
     </div>

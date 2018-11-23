@@ -21,6 +21,9 @@ Auth::routes();
 
 Route::resource('statusair','HomeController');
 Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/register',function () {
+//     return viwe('auth.passwords.register');
+// });
 /*--------------------------------Level---------------------------------------*/
 // Route::get('/level1', function () {
 //     return view('layouts.level1');
